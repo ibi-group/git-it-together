@@ -32,6 +32,10 @@ Git clone this repository then:
 
     npm start
 
+#### Test run via local command line
+
+    SLACK_TOKEN=secret GH_TOKEN=secret GH_REPOS=johndoe/somerepo,johndoe/anotherrepo ./bin/pr-police --cli
+
 This will start the server locally until `Ctrl-C` is pressed.
 
 **Note:** You will need to pass all the required env vars.
