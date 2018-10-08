@@ -17,7 +17,7 @@
     },
     "DEBUG": {
       "description": "Debug flag to enable more verbose logging",
-      "value": false
+      "value": "false"
     },
     "GH_TOKEN": {
       "description": "Github account token to access needed repositories",
