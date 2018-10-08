@@ -7,7 +7,6 @@
     "pretest": "standard",
     "test": "tape test/*.js | faucet",
     "start": "node index.js",
-    "commitmsg": "conventional-changelog-lint -e",
     "version": "standard-changelog"
   },
   "keywords": [

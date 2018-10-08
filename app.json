@@ -23,17 +23,9 @@
       "description": "Debug flag to enable more verbose logging",
       "value": "false"
     },
-    "GH_TOKEN": {
-      "description": "Github account token to access needed repositories",
-      "value": "secret"
-    },
-    "SLACK_TOKEN": {
-      "description": "Slack token for bot",
-      "value": "secret"
-    },
-    "GH_REPOS": {
-      "description": "Repositories to watch in user/repo format, comma-separated",
-      "value": "johndoe/somerepo,johndoe/anotherrepo"
+    "GH_BLOCKED_LABEL": {
+      "description": "Label to mark PRs that are blocked and need assistance. `GH_EXCLUDE_LABELS` will override this.",
+      "value": ""
     },
     "GH_EXCLUDE_LABELS": {
       "description": "Repository labels that will exclude pull requests, comma-separated. Supercedes GH_LABELS",
@@ -42,6 +34,28 @@
     },
     "GH_LABELS": {
       "description": "Repository labels to filter pull requests, comma-separated",
+      "value": "",
+      "required": false
+    },
+    "GH_REPOS": {
+      "description": "Repositories to watch in user/repo format, comma-separated",
+      "value": "johndoe/somerepo,johndoe/anotherrepo"
+    },
+    "GH_TOKEN": {
+      "description": "Github account token to access needed repositories",
+      "value": "secret"
+    },
+    "GH_WIP_LABEL":  {
+      "description": "Label to mark PRs that are works in progress (WIP) and not ready for review yet. `GH_EXCLUDE_LABELS` will override this.",
+      "value": ""
+    },
+    "SLACK_BOT_ICON": {
+      "description": "URL of the bot icon to show when posting messages",
+      "value": "",
+      "required": false
+    },
+    "SLACK_BOT_NAME": {
+      "description": "The name of the bot on your slack organization",
       "value": "",
       "required": false
     },
@@ -55,15 +69,9 @@
       "value": "",
       "required": false
     },
-    "SLACK_BOT_NAME": {
-      "description": "The name of the bot on your slack organization",
-      "value": "",
-      "required": false
-    },
-    "SLACK_BOT_ICON": {
-      "description": "URL of the bot icon to show when posting messages",
-      "value": "",
-      "required": false
+    "SLACK_TOKEN": {
+      "description": "Slack token for bot",
+      "value": "secret"
     },
     "TIMES_TO_RUN": {
       "description": "What times of day to run (24-hour format), comma-separated",

@@ -74,13 +74,13 @@ PR labels, comma-separated, to announce in Slack. If omitted, all labels (beside
 
 Example: `ready,needs-review`
 
-##### 'GH_BLOCKED_LABEL'
+##### `GH_BLOCKED_LABEL`
 
 Label to mark PRs that are blocked and need assistance. `GH_EXCLUDE_LABELS` will override this.
 
 Example: `blocked`
 
-##### 'GH_WIP_LABEL'
+##### `GH_WIP_LABEL`
 
 Label to mark PRs that are works in progress (WIP) and not ready for review yet. `GH_EXCLUDE_LABELS` will override this.
 
