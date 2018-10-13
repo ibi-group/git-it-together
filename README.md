@@ -6,9 +6,11 @@
 
 Pr. Police is a slackbot that sends to configured slack channels a listing of open pull requests that are waiting for a review. It supports watching multiple repositories, and filtering the pull requests by label.
 
-This project is part of the Talkdesk Hackathon April 2017.
+This project was built as part of the Talkdesk Hackathon April 2017, but this fork is heavily modified to fit the needs of Conveyal's software development process.
 
-## Running the bot
+This bot is able to respond with a list of all open PRs or is able to show PRs assigned to yourself.  If you @PR Police and include the character sequence `me`, then the bot will respond with a filtered list of PRs assigned to you, otherwise it'll report on all PRs.  Your slack username and github username need to have at least the first 3 characters matching (case insensitive).  For example if your github username is `blahblah` but your slack username is `Blah B` it'll match.
+
+## Deploying the bot
 
 ### The quick and easy way
 
@@ -18,11 +20,9 @@ The easiest way to get an instance of Pr. Police up and running is to deploy it 
 
 You'll still need to fill in all the environment variables. For more info on this, head down to the Configuration section.
 
-### Via NPM
+## Running the bot locally
 
-    npm install pr-police
-
-### Manually
+### Install
 
 Git clone this repository then:
 
@@ -30,9 +30,9 @@ Git clone this repository then:
 
 #### Run
 
-    npm start
+    SLACK_TOKEN=secret GH_TOKEN=secret GH_REPOS=johndoe/somerepo,johndoe/anotherrepo npm start
 
-This will start the server locally until `Ctrl-C` is pressed.
+This will start the server locally until `Ctrl-C` is pressed.  You'll then be able to communicate with the bot on a channel the bot has been invited to.
 
 **Note:** You will need to pass all the required env vars.
 
