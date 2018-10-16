@@ -8,7 +8,7 @@ Pr. Police is a slackbot that sends to configured slack channels a listing of op
 
 This project was built as part of the Talkdesk Hackathon April 2017, but this fork is heavily modified to fit the needs of Conveyal's software development process.
 
-This bot is able to respond with a list of all open PRs or is able to show PRs assigned to yourself.  If you @PR Police and include the character sequence `me`, then the bot will respond with a filtered list of PRs assigned to you, otherwise it'll report on all PRs.  Your slack username and github username need to have at least the first 3 characters matching (case insensitive).  For example if your github username is `blahblah` but your slack username is `Blah B` it'll match.
+This bot is able to respond with a help message, PRs assigned to yourself or a list of all open PRs.  If you @PR Police with `help` it'll send you a help message.  If you @PR Police and include the word `me`, then the bot will respond with a filtered list of PRs assigned to you, otherwise it'll report on all PRs.  Your slack username and github username need to have at least the first 3 characters matching (case insensitive).  For example if your github username is `blahblah` but your slack username is `Blah-B` it'll match.
 
 ## Deploying the bot
 
@@ -98,13 +98,17 @@ The list of channels on your team where Pr. Police will post the announcements. 
 
 The list of private groups on your team where Pr. Police will post the announcements. Multiple channels are comma separated.
 
-##### `SLACK_BOT_NAME`
+##### `SLACK_BOT_DISPLAY_NAME`
 
-The name of your Pr. Police bot on slack.
+The display name of your Pr. Police bot on slack.  Default: `Pr. Police`.
 
 ##### `SLACK_BOT_ICON`
 
 URL of the icon for the slack bot when sending messages.
+
+##### `SLACK_BOT_USER_NAME`
+
+The username of your Pr. Police bot on slack.  This must match in order for the bot to work!  Default: `pr-police`.
 
 ##### `TIMES_TO_RUN`
 
