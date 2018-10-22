@@ -108,7 +108,7 @@ URL of the icon for the slack bot when sending messages.
 
 ##### `SLACK_BOT_USER_NAME`
 
-The username of your Pr. Police bot on slack.  This must match in order for the bot to work!  Default: `pr-police`.
+The username of your Pr. Police bot on slack.  The username of the bot as defined in Slack must match this environment variable in order for the bot to work!  Default: `pr-police`.
 
 ##### `TIMES_TO_RUN`
 
