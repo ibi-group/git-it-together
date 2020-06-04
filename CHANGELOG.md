@@ -1,3 +1,13 @@
+<a name="ibi-group-fork"></a>
+# IBI Group Fork
+
+Refactoring to work as a serverless script that sends messages to MS Teams.
+
+<a name="conveyal-fork"></a>
+# Conveyal Fork
+
+Changed things up to specialize in daily reminders that grouped PRs as they are assigned to people.
+
 <a name="1.2.0"></a>
 # 1.2.0 (2017-05-11)
 
@@ -25,6 +35,3 @@
 * add support for slack private groups ([3d55c24](https://github.com/Talkdesk/pr-police/commit/3d55c24))
 * first version of the slackbot ([ce7b1a9](https://github.com/Talkdesk/pr-police/commit/ce7b1a9))
 * only get pull requests on a fixed hour ([914641d](https://github.com/Talkdesk/pr-police/commit/914641d))
-
-
-

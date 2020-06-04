@@ -1,24 +1,14 @@
-# Pr. Police [![Build Status](https://travis-ci.org/Talkdesk/pr-police.svg?branch=master)](https://travis-ci.org/Talkdesk/pr-police)
-
-![Pr. Police logo](https://raw.githubusercontent.com/Talkdesk/pr-police/master/images/logo-blue-small.png)
+# git-it-together
 
 ## About
 
-Pr. Police is a slackbot that sends to configured slack channels a listing of open pull requests that are waiting for a review. It supports watching multiple repositories, and filtering the pull requests by label.
+git-it-together is a cli tool/serverless process that sends to configured slack channels a listing of open pull requests that are waiting for a review. It supports watching multiple repositories, and filtering the pull requests by label.
 
-This project was built as part of the Talkdesk Hackathon April 2017, but this fork is heavily modified to fit the needs of Conveyal's software development process.
-
-This bot is able to respond with a help message, PRs assigned to yourself or a list of all open PRs.  If you @PR Police with `help` it'll send you a help message.  If you @PR Police and include the word `me`, then the bot will respond with a filtered list of PRs assigned to you, otherwise it'll report on all PRs.  Your slack username and github username need to have at least the first 3 characters matching (case insensitive).  For example if your github username is `blahblah` but your slack username is `Blah-B` it'll match.
+This project was built as part of the Talkdesk Hackathon April 2017, but this fork is heavily modified to fit the needs of IBI Groups's software development process.
 
 ## Deploying the bot
 
-### The quick and easy way
-
-The easiest way to get an instance of Pr. Police up and running is to deploy it to Heroku by clicking on the button below.
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
-
-You'll still need to fill in all the environment variables. For more info on this, head down to the Configuration section.
+WIP
 
 ## Running the bot locally
 
@@ -28,21 +18,13 @@ Git clone this repository then:
 
     npm install
 
-#### Run
-
-    SLACK_TOKEN=secret GH_TOKEN=secret GH_REPOS=johndoe/somerepo,johndoe/anotherrepo npm start
-
-This will start the server locally until `Ctrl-C` is pressed.  You'll then be able to communicate with the bot on a channel the bot has been invited to.
-
-**Note:** You will need to pass all the required env vars.
-
 #### Test run via local command line
 
-    SLACK_TOKEN=secret GH_TOKEN=secret GH_REPOS=johndoe/somerepo,johndoe/anotherrepo ./bin/pr-police --cli
+    SLACK_TOKEN=secret GH_TOKEN=secret GH_REPOS=johndoe/somerepo,johndoe/anotherrepo ./bin/git-it-together --cli
 
 ## Configuration
 
-Pr. Police has the following environment variables available:
+git-it-together has the following environment variables available:
 
 ##### `DEBUG`
 
@@ -64,7 +46,7 @@ The slack token for the bot to access your slack team
 
 The list of repositories to watch. The format is `user/repo` and comma separated.
 
-Example: `rogeriopvl/gulp-ejs,rogeriopvl/pullhub,talkdesk/pr-police`
+Example: `rogeriopvl/gulp-ejs,rogeriopvl/pullhub`
 
 ##### `GH_EXCLUDE_LABELS`
 
@@ -92,15 +74,15 @@ Example: `wip`
 
 ##### `SLACK_CHANNELS`
 
-The list of channels on your team where Pr. Police will post the announcements. Multiple channels are comma separated.
+The list of channels on your team where git-it-together will post the announcements. Multiple channels are comma separated.
 
 ##### `SLACK_GROUPS`
 
-The list of private groups on your team where Pr. Police will post the announcements. Multiple channels are comma separated.
+The list of private groups on your team where git-it-together will post the announcements. Multiple channels are comma separated.
 
 ##### `SLACK_BOT_DISPLAY_NAME`
 
-The display name of your Pr. Police bot on slack.  Default: `Pr. Police`.
+The display name of your git-it-together bot on slack.  Default: `git-it-together`.
 
 ##### `SLACK_BOT_ICON`
 
@@ -108,7 +90,7 @@ URL of the icon for the slack bot when sending messages.
 
 ##### `SLACK_BOT_USER_NAME`
 
-The username of your Pr. Police bot on slack.  The username of the bot as defined in Slack must match this environment variable in order for the bot to work!  Default: `pr-police`.
+The username of your git-it-together bot on slack.  The username of the bot as defined in Slack must match this environment variable in order for the bot to work!  Default: `git-it-together`.
 
 ##### `TIMES_TO_RUN`
 
@@ -124,6 +106,6 @@ If heroku attempts to start a web process instead of a worker, you may need to r
 
 ## Credits
 
-Pr. Police was developed by [Rogério Vicente](https://github.com/rogeriopvl) during one of Talkdesk's internal hackathons.
+The original version of git-it-together was developed by [Rogério Vicente](https://github.com/rogeriopvl) during one of Talkdesk's internal hackathons.
 
 Artwork created by [Micaela Neto](https://cargocollective.com/micaelaneto)

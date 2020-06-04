@@ -1,7 +1,7 @@
 {
-  "name": "pr-police",
+  "name": "git-it-together",
   "version": "1.2.0",
-  "description": "Slackbot that warns about open pull requests with given labels",
+  "description": "A serverless service that warns about open pull requests with given labels",
   "main": "index.js",
   "scripts": {
     "pretest": "standard",
@@ -17,7 +17,7 @@
     "labels"
   ],
   "bin": {
-    "pr-police": "./bin/pr-police"
+    "git-it-together": "./bin/git-it-together"
   },
   "author": "rogeriopvl",
   "license": "MIT",
