@@ -61,11 +61,15 @@ functions:
   git-it-together:
     handler: lib/serverless.run
     events:
-      - schedule: cron(0 12 * * MON-FRI *)
+      # cron times are in UTC see https://docs.aws.amazon.com/AmazonCloudWatch/latest/events/ScheduledEvents.html#CronExpressions
+      - schedule: cron(0 12 ? * MON-FRI *)
 
-#    Define function environment variables here
-#    environment:
-#      variable2: value2
+    # Define function environment variables here
+    environment:
+      GH_REPOS: ibi-group/git-it-together,opentripplanner/otp-ui
+      GH_TOKEN: secret
+      GH_WIP_LABEL: WIP
+      MS_TEAMS_WEBHOOK: https://outlook.office.com/webhook/secret
 
 # you can add CloudFormation resource templates here
 #resources:

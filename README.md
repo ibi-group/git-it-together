@@ -6,9 +6,12 @@ git-it-together is a cli tool/serverless process that sends to configured slack 
 
 This project was built as part of the Talkdesk Hackathon April 2017, but this fork is heavily modified to fit the needs of IBI Groups's software development process.
 
-## Deploying the bot
+## Deploying as a serverless application
 
-WIP
+```shell
+yarn global add serverless
+serverless deploy
+```
 
 ## Running the bot locally
 
@@ -20,6 +23,8 @@ Git clone this repository then:
 npm install
 ```
 
+And then copy `serverless-example.yml` to `serverless.yml` and update values as needed.
+
 #### Test run via local command line
 
 ```shell
@@ -30,6 +35,12 @@ SLACK_TOKEN=secret GH_TOKEN=secret GH_REPOS=johndoe/somerepo,johndoe/anotherrepo
 
 ```shell
 MS_TEAMS_WEBHOOK=https://outlook.office.com/webhook/change_me GH_REPOS=ibi-group/trimet-mod-otp ./bin/git-it-together --cli
+```
+
+or
+
+```shell
+serverless invoke local --function git-it-together
 ```
 
 ## Configuration
@@ -46,7 +57,7 @@ Which days of the week to run on. Default: `Monday,Tuesday,Wednesday,Thursday,Fr
 
 ##### `GH_TOKEN`
 
-The github account token to access the repos
+The github account token to access the repos. (only required if using private repos)
 
 ##### `SLACK_TOKEN`
 
@@ -109,6 +120,10 @@ What times of day to run (24-hour format, leading zeroes are not necessary). Mul
 ##### `TZ`
 
 The timezone the server should use. Heroku default is UTC. Uses tz database timezone format. Example: `America/Los_Angeles`.
+
+##### `MS_TEAMS_WEBHOOK`
+
+The webhook to send messages to MS Teams to. *NOTE: if this is set, messages will be formatted specifically for MS Teams*
 
 ## Heroku configuration
 
