@@ -16,11 +16,21 @@ WIP
 
 Git clone this repository then:
 
-    npm install
+```shell
+npm install
+```
 
 #### Test run via local command line
 
-    SLACK_TOKEN=secret GH_TOKEN=secret GH_REPOS=johndoe/somerepo,johndoe/anotherrepo ./bin/git-it-together --cli
+```shell
+SLACK_TOKEN=secret GH_TOKEN=secret GH_REPOS=johndoe/somerepo,johndoe/anotherrepo ./bin/git-it-together --cli
+```
+
+#### Test posting to MS-TEAMS using serverless run via local command line
+
+```shell
+MS_TEAMS_WEBHOOK=https://outlook.office.com/webhook/change_me GH_REPOS=ibi-group/trimet-mod-otp ./bin/git-it-together --cli
+```
 
 ## Configuration
 
