@@ -1,7 +1,7 @@
 {
   "name": "git-it-together",
   "version": "1.2.0",
-  "description": "A serverless service that warns about open pull requests with given labels",
+  "description": "A serverless service that sends messages to MS Teams about open pull requests with given labels",
   "main": "index.js",
   "scripts": {
     "lint": "mastarm lint .",
