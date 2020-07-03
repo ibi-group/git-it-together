@@ -22,7 +22,9 @@ functions:
 
     # function environment variables
     environment:
-      GH_REPOS: ibi-group/git-it-together,opentripplanner/otp-ui
+      BASE_BRANCH_OVERRIDES: ibi-group/OpenTripPlanner:ibi-dev
+      COMPARE_BRANCH_OVERRIDES: ibi-group/otp-ui:opentripplanner
+      GH_REPOS: ibi-group/OpenTripPlanner,ibi-group/git-it-together,opentripplanner/otp-ui
       GH_TOKEN: secret
       GH_WIP_LABEL: WIP
       MS_TEAMS_WEBHOOK: https://outlook.office.com/webhook/secret

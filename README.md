@@ -26,13 +26,8 @@ npm install
 And then copy `serverless-example.yml` to `serverless.yml` and update values as needed.
 
 
-#### Test posting to MS Teams using serverless run via local command line
+### Invoking the script
 
-```shell
-MS_TEAMS_WEBHOOK=https://outlook.office.com/webhook/change_me GH_REPOS=ibi-group/trimet-mod-otp ./bin/git-it-together --cli
-```
-
-or
 
 ```shell
 serverless invoke local --function git-it-together
