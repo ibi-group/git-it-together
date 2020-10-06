@@ -23,6 +23,7 @@
   "author": "rogeriopvl",
   "license": "MIT",
   "dependencies": {
+    "github-api": "^3.3.0",
     "isomorphic-fetch": "^2.2.1",
     "minimist": "^1.2.0",
     "moment": "^2.18.1",
